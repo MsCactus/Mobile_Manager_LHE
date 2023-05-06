@@ -30,8 +30,6 @@ TC1: Verify element on the screen
     Verify if element is displayed on the screen    ${btn_ForgetPassword}
     Verify if element is displayed on the screen    ${btn_Login}
 
-    
-
 TC2: Valid login without saving account
     [Tags]    tc_login_02
     Input valid username and password
