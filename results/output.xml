@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230506 14:39:20.748" rpa="false" schemaversion="3">
+<suite id="s1" name="Mobile Manager LHE" source="D:\Project\Mobile_Manager_LHE">
+<suite id="s1-s1" name="Testcases" source="D:\Project\Mobile_Manager_LHE\testcases">
+<suite id="s1-s1-s1" name="UI" source="D:\Project\Mobile_Manager_LHE\testcases\UI">
+<suite id="s1-s1-s1-s1" name="Order" source="D:\Project\Mobile_Manager_LHE\testcases\UI\order.robot">
+<test id="s1-s1-s1-s1-t1" name="TC: Cancel deny and check status is not change" line="46">
+<kw name="Open an Application" library="appium_common" type="SETUP">
+<arg>${appium_server}</arg>
+<arg>${platform_name}</arg>
+<arg>${automation_name}</arg>
+<arg>${platform_version}</arg>
+<arg>${device_name}</arg>
+<arg>${udid}</arg>
+<arg>${app_package}</arg>
+<arg>${app_activity}</arg>
+<arg>${no_reset}</arg>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${appium_server}</arg>
+<arg>platformName=${platform_name}</arg>
+<arg>automationName=${automation_name}</arg>
+<arg>platformVersion=${platform_version}</arg>
+<arg>deviceName=${device_name}</arg>
+<arg>udid=${udid}</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>noReset=${no_reset}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20230506 14:39:20.935" endtime="20230506 14:39:30.858"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:20.934" endtime="20230506 14:39:30.858"/>
+</kw>
+<kw name="Login and swipe to context" library="login_keywords">
+<arg>${icon_Order}</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 14:39:45.860" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20230506 14:39:30.859" endtime="20230506 14:39:45.861"/>
+</kw>
+<kw name="Wait Until Page Contains" library="AppiumLibrary">
+<arg>Biểu đồ tăng trưởng CHTH</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" starttime="20230506 14:39:45.862" endtime="20230506 14:39:46.124"/>
+</kw>
+<kw name="Swipe By Percent" library="AppiumLibrary">
+<arg>90</arg>
+<arg>50</arg>
+<arg>10</arg>
+<arg>50</arg>
+<doc>Swipe from one percent of the screen to another percent, for an optional duration.
+Normal swipe fails to scale for different screen resolutions, this can be avoided using percent.</doc>
+<status status="PASS" starttime="20230506 14:39:46.125" endtime="20230506 14:39:47.326"/>
+</kw>
+<kw name="Click on element on the screen" library="Elements_common">
+<arg>${xpath}</arg>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:39:47.331" endtime="20230506 14:39:48.232"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:47.330" endtime="20230506 14:39:48.232"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:47.329" endtime="20230506 14:39:48.233"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230506 14:39:48.237" level="INFO">Clicking element '//android.widget.ImageView[@content-desc="Đơn hàng"]'.</msg>
+<status status="PASS" starttime="20230506 14:39:48.234" endtime="20230506 14:39:49.011"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:47.327" endtime="20230506 14:39:49.011"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:30.858" endtime="20230506 14:39:49.012"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230506 14:39:59.015" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230506 14:39:49.014" endtime="20230506 14:39:59.015"/>
+</kw>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${bnt_CreateOrder}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:39:59.024" endtime="20230506 14:39:59.246"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:59.022" endtime="20230506 14:39:59.247"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:59.019" endtime="20230506 14:39:59.248"/>
+</kw>
+<kw name="Click on element on the screen" library="Elements_common">
+<arg>${btn_ViewDetails}</arg>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:39:59.255" endtime="20230506 14:39:59.397"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:59.254" endtime="20230506 14:39:59.397"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:59.252" endtime="20230506 14:39:59.398"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230506 14:39:59.402" level="INFO">Clicking element '//android.widget.Button[@content-desc="Xem chi tiết"]'.</msg>
+<status status="PASS" starttime="20230506 14:39:59.399" endtime="20230506 14:40:00.168"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:59.249" endtime="20230506 14:40:00.169"/>
+</kw>
+<kw name="Click on element on the screen" library="Elements_common">
+<arg>${btn_DenyOrder}</arg>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:40:00.175" endtime="20230506 14:40:04.582"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:00.173" endtime="20230506 14:40:04.582"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:00.172" endtime="20230506 14:40:04.582"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230506 14:40:04.584" level="INFO">Clicking element '//android.widget.Button[@content-desc="Từ chối"]'.</msg>
+<status status="PASS" starttime="20230506 14:40:04.583" endtime="20230506 14:40:05.311"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:00.170" endtime="20230506 14:40:05.312"/>
+</kw>
+<kw name="Click on element on the screen" library="Elements_common">
+<arg>${btn_CancelDeny}</arg>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${xpath}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:40:05.319" endtime="20230506 14:40:05.494"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:05.318" endtime="20230506 14:40:05.494"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:05.316" endtime="20230506 14:40:05.495"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230506 14:40:05.501" level="INFO">Clicking element '//android.widget.Button[@content-desc="Huỷ"]'.</msg>
+<status status="PASS" starttime="20230506 14:40:05.495" endtime="20230506 14:40:06.321"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:05.314" endtime="20230506 14:40:06.322"/>
+</kw>
+<kw name="Verify if element is displayed on the screen" library="login_keywords">
+<arg>${waitingOrders}</arg>
+<kw name="Wait until element is visibled on the screen" library="Elements_common">
+<arg>${button}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>${timeout}</arg>
+<arg>${time_retry}</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${xpath}</arg>
+<arg>${timeout}</arg>
+<arg>error= Cannot find ${xpath} element</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20230506 14:40:06.329" endtime="20230506 14:40:06.507"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:06.327" endtime="20230506 14:40:06.507"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:06.326" endtime="20230506 14:40:06.507"/>
+</kw>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${button}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20230506 14:40:06.608" level="INFO">Current page contains element '//android.view.View[@content-desc="Chờ xử lý"]'.</msg>
+<status status="PASS" starttime="20230506 14:40:06.507" endtime="20230506 14:40:06.609"/>
+</kw>
+<kw name="Element Should Be Enabled" library="AppiumLibrary">
+<arg>${button}</arg>
+<doc>Verifies that element identified with locator is enabled.</doc>
+<msg timestamp="20230506 14:40:06.749" level="INFO">Element '//android.view.View[@content-desc="Chờ xử lý"]' is enabled .</msg>
+<status status="PASS" starttime="20230506 14:40:06.610" endtime="20230506 14:40:06.749"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:06.324" endtime="20230506 14:40:06.749"/>
+</kw>
+<kw name="Close the application" library="appium_common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" starttime="20230506 14:40:06.750" endtime="20230506 14:40:06.751"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230506 14:40:06.751" endtime="20230506 14:40:07.389"/>
+</kw>
+<status status="PASS" starttime="20230506 14:40:06.750" endtime="20230506 14:40:07.390"/>
+</kw>
+<status status="PASS" starttime="20230506 14:39:20.933" endtime="20230506 14:40:07.392"/>
+</test>
+<status status="PASS" starttime="20230506 14:39:20.790" endtime="20230506 14:40:07.396"/>
+</suite>
+<status status="PASS" starttime="20230506 14:39:20.787" endtime="20230506 14:40:07.400"/>
+</suite>
+<status status="PASS" starttime="20230506 14:39:20.783" endtime="20230506 14:40:07.404"/>
+</suite>
+<status status="PASS" starttime="20230506 14:39:20.753" endtime="20230506 14:40:07.407"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Mobile Manager LHE">Mobile Manager LHE</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcases">Mobile Manager LHE.Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="UI">Mobile Manager LHE.Testcases.UI</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Order">Mobile Manager LHE.Testcases.UI.Order</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

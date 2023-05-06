@@ -1,0 +1,6 @@
+robotframework-tidy
+robotframework
+robotframework-seleniumlibrary
+robotframework-appiumlibrary
+robotframework-requests
+requests
