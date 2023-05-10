@@ -14,6 +14,6 @@ ${btn_AddProducts}      //android.widget.Button[@content-desc="Thêm sản phẩ
 ${txtbox_Quantities}    //android.widget.EditText
 ${btn_DenyOrder}        //android.widget.Button[@content-desc="Từ chối"]
 ${btn_SubmitOrder}      //android.widget.Button[@content-desc="Phê duyệt"]
-${txtbox_ReasonDeny}    //android.widget.EditText[contains(@text,'Vui lòng nhập lý do từ chối')]
+${txtbox_ReasonDeny}    //android.widget.EditText[contains(@text,'Nhập lý do từ chối')]
 ${btn_CancelDeny}       //android.widget.Button[@content-desc="Huỷ"]
 ${btn_SubmitDeny}       //android.widget.Button[@content-desc="Xác nhận"]

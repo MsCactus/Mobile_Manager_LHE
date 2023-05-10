@@ -3,7 +3,7 @@ Library     AppiumLibrary
 
 
 *** Variables ***
-${timeout}          32s
+${timeout}          24s
 ${time_retry}       4s
 
 

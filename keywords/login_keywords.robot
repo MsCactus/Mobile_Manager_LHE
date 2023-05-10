@@ -10,8 +10,6 @@ Input valid username and password
     Sleep    5s
     Click on element on the screen    ${txtbox_Password}
     Input text into element    ${txtbox_Password}    admin@11
-    Sleep    5s
-    Click on element on the screen    ${btn_Login}
 
 Login successful and save account
     Click on element on the screen    ${txtbox_Account}
@@ -30,10 +28,25 @@ Login and swipe to context
     Swipe By Percent    90    50    10    50
     Click on element on the screen    ${xpath}
 
+Verify if account and password is not saved
+    Wait until element is visibled on the screen    ${txtbox_Account}
+    Wait until element is visibled on the screen    ${txtbox_Password}
+    ${user}=    Get Text    ${txtbox_Account}
+    ### vẫn lưu mật khẩu và tài khoản dù ko check vào lưu tài khoản
+    # Page Should Not Contain Text    adminqc
+    # Should Be Empty    ${txtbox_Password}
+    # Click on element on the screen    ${icon_Search}
+    # Should Be Empty    ${txtbox_Password}
+
 Verify if account and password is saved
     Wait until element is visibled on the screen    ${txtbox_Account}
     Page Should Contain Text    adminqc
     Wait until element is visibled on the screen    ${txtbox_Password}
+    ${pass1}=    Get Text    ${txtbox_Password}
+    Should Be Equal As Strings    ${pass1}    ••••••••, Nhập mật khẩu
+    Click on element on the screen    ${icon_Search}
+    ${pass}=    Get Text    ${txtbox_Password}
+    Should Be Equal As Strings    ${pass}    admin@11, Nhập mật khẩu
 
 Verify if text is displayed on the screen
     [Arguments]    ${text}
