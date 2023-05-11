@@ -6,3 +6,5 @@ ${icon_DistributorsManagement}      //android.widget.ImageView[@content-desc="Qu
 ${icon_Order}                       //android.widget.ImageView[@content-desc="Đơn hàng"]
 ${icon_AccountSettings}             //android.widget.ImageView[@content-desc="Quản lý tài khoản"]
 ${icon_Product}                     //android.widget.ImageView[@content-desc="Sản phẩm"]
+
+${btn_Home}    

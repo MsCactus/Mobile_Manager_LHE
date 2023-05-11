@@ -1,7 +1,6 @@
 *** Settings ***
 Library             AppiumLibrary
 Resource            ../../resources/resources_common/resources_common.robot
-Resource    ../../testcases/UI/login_invalid.robot
 
 Test Setup          Open an Application
 ...                     ${appium_server}
@@ -14,6 +13,10 @@ Test Setup          Open an Application
 ...                     ${app_activity}
 ...                     ${no_reset}
 Test Teardown       Close the application
+
+
+*** Variables ***
+${error}    Bạn cần hoàn thiện trường thông tin này
 
 
 *** Test Cases ***
@@ -66,6 +69,3 @@ TC5: Input blank username and password
     Sleep    10s
     Click on element on the screen    ${btn_Login}
     Page Should Contain Text    ${error}
-
-*** Variables ***
-${error}    Bạn cần hoàn thiện trường thông tin này

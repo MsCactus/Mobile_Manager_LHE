@@ -30,10 +30,11 @@ Input invalid username and password
     Input text into element    ${txtbox_Password}    ${password}
     Sleep    10s
     Click on element on the screen    ${btn_Login}
-    # Wait until element is visibled on the screen    //android.view.View[@content-desc="Thông báo"]
-    # Wait until element is visibled on the screen    //android.view.View[@content-desc="Vui lòng đợi"]
-    # Wait Until Page Does Not Contain Element    //android.view.View[@content-desc="Vui lòng đợi"]    15s
-    # Wait until element is visibled on the screen    //android.view.View[@content-desc="Thông báo"]/preceding-sibling::android.widget.ImageView
-    # Wait until element is visibled on the screen    //android.view.View[@content-desc="Đăng nhập thất bại"]
+    Wait until element is visibled on the screen    //android.view.View[@content-desc="Thông báo"]
+    Wait until element is visibled on the screen    //android.view.View[@content-desc="Vui lòng đợi"]
+    Wait Until Page Does Not Contain Element    //android.view.View[@content-desc="Vui lòng đợi"]    15s
+    Wait until element is visibled on the screen
+    ...    //android.view.View[@content-desc="Thông báo"]/preceding-sibling::android.widget.ImageView
+    Wait until element is visibled on the screen    //android.view.View[@content-desc="Đăng nhập thất bại"]
     Page Should Contain Text    ${error_msg}
     Log    ${note}
